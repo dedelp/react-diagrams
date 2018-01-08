@@ -26,7 +26,7 @@ export class PortModel extends BaseModel<BaseModelListener> {
 	doClone(lookupTable = {}, clone) {
 		clone.links = {};
 		clone.parentNode = this.parentNode.clone(lookupTable);
-}
+	}
 
 	constructor(name: string, id?: string) {
 		super(id);
@@ -64,7 +64,7 @@ export class PortModel extends BaseModel<BaseModelListener> {
 		linkModel.setSourcePort(this);
 		return linkModel;
 	}
-	
+
 	isLocked() {
 		return super.isLocked() || this.getParent().isLocked();
 	}
