@@ -86,6 +86,7 @@ export class DiagramEngine extends BaseEntity<DiagramEngineListener> {
 		if (this.diagramModel.isLocked()) {
 			return true;
 		}
+
 		return model.isLocked();
 	}
 
